@@ -1,52 +1,28 @@
-# Дано натуральное число A > 1.
-# Определите, каким по счету числом Фибоначчи оно является,
-# то есть выведите такое число n,
-# что φ(n)=A. Если А не является числом Фибоначчи, выведите число -1.
-# from Task import t10
-# # number = int (input ("Введите число - > "))
-# # n = 1
-# # while (number > 0):
-# #     n *= number
-# #     number -= 1
-# # print(n)
-#
-#
-#
-# number = int (input ("натуральное число A > 1 - > "))
-#
-# flag = True
-# i = 1
-# while(flag):
-#     temp = t10.fib(i)
-#     if temp < number:
-#         i+=1
-#     elif temp == number:
-#         print(i)
-#         flag = False
-#     else:
-#         print(-1)
-#         flag = False
+from Task import t10
+import random
+# task #10
+# def get_count_flip(count_coins: int) -> tuple:
+#     count_eagle = int(random.normalvariate(count_coins/2, count_coins/7))
+#     if count_eagle > 100:
+#         count_eagle = 100
+#     elif count_eagle < 0:
+#         count_eagle = 0
+#     count_tails = count_coins - count_eagle
+#     return (count_tails, "решки")if count_tails < count_eagle else (count_eagle, "орлы")
 
-# import random
+n = int(input("Сколько На столе лежат монеток: "))
+count, side, side_2 = t10.get_count_flip(count_coins=n)
+print(f"Минимальное {count} монеток, которые нужно перевернуть, чтобы все монетки были повернуты вверх {side_2} стороной.")
+
+# ------------------------------------ #
+
+number_1 = random.randint(1, 1000)
+number_2 = random.randint(1, 1000)
+S = number_1 + number_2
+P = number_1 * number_2
+print(f"Сумма: {S} Произведение: {P}")
+# Формула ментальной связи
+X1 = int((S + (S**2-4*P)**0.5)/2)
+X2 = int((S - (S**2-4*P)**0.5)/2)
 #
-# n = int(input("общее количество рассматриваемых дней (1 ≤ N ≤ 100)"))
-# count = 0
-# day_max = 0
-# for i in range(n):
-#     t = random.randint(-50, 50)
-#     if t>0:
-#         count += 1
-#     else:
-#         if day_max < count:
-#             day_max = count
-#         count = 0
-# if day_max < count:
-#     day_max = count
-# print(day_max)
-
-
-n = int(input("общее количество рассматриваемых дней (1 ≤ N ≤ 100)"))
-p = 1
-for i in range(n):
-    print(f"{p}", end='  ')
-    p *= -3
+print(f"Наш результат ({X1}, {X2}), задумал ({number_1}, {number_2})")
