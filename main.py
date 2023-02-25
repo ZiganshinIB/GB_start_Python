@@ -26,3 +26,12 @@ X1 = int((S + (S**2-4*P)**0.5)/2)
 X2 = int((S - (S**2-4*P)**0.5)/2)
 #
 print(f"Наш результат ({X1}, {X2}), задумал ({number_1}, {number_2})")
+
+N = int(input("Введите число N: "))
+k = 0
+while True:
+    if 2**k <= N:
+        print(k)
+        k += 1
+    else:
+        break
