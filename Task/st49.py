@@ -60,6 +60,3 @@ if __name__ == "__main__":
     add_data_db('phon.txt', data={'Фамилия': 'Иванов', 'Имя': 'Иван', 'Номер': ' 111', 'доп': 'описание Иванова'})
     print(get_db("phon.txt"))
     del_data_db('phon.txt', 'Фамилия', 'Иванов')
-
-
-
